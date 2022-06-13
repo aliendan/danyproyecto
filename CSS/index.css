@@ -1,19 +1,11 @@
 
-* { 
-    margin: 0;
-    padding: 0;
-    box box-sizing: border-box;
-}
-
-
 img {
     width: 100%;
 }
 header {
     display: flex;
-    background-color: black;
-    align-items: center;
-    background-size: cover;
+    background: linear-gradient(to right, black, blue);  
+    align-items: right;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -23,9 +15,8 @@ footer {
     text-align: center;
     margin: 10px;
     padding: 70px;
-
-
 }
+
 nav {
     display: inline-block;
 }
@@ -37,8 +28,11 @@ nav {
 
 .menu__link {
     display: inline-block;
+}
+.menu__link:hover {
     list-style-type: none;
     font-size: 20px;
+    border: 1px solid red;
 }
 
 .link {
@@ -56,7 +50,6 @@ nav {
 .sithlord {
     width: 500px;   
     height: 500px;
-    padding-left: 25%;
     background-image: url('../img/SithLords.jpg');
     background-size: 30%;
 }
@@ -70,7 +63,6 @@ nav {
 body .sithlord {
     width: 500px;   
     height: 500px;
-    padding-left: 25%;
     background-image: url('../img/SithLords.jpg');
     background-size: 30%;
 }
@@ -119,14 +111,12 @@ ul{
 .mando{
     width: 500px;   
     height: 500px;
-    padding-left: 25%;
     background-image: url('../img/Mandalorians.jpg');
     background-size: 30%;
 }
 .starwars{
     width: 500px;   
     height: 500px;
-    padding-left: 25%;
     background-image: url('../img/starwars.jpg');
     background-size: 30%;
 }
@@ -134,7 +124,6 @@ ul{
 .jedi {
     width: 500px;   
     height: 500px;
-    padding-left: 25%;
     background-image: url('../img/Jediknights.jpg');
     background-size: 30%;
 }
@@ -143,31 +132,48 @@ ul{
     max-width: 1200px;
     margin: 0 auto;
 }
-
+@media screen {
+    header {
+        flex-direction: column;
+    }
+}
 #plantilla {
     display: grid;
     grid-template-areas: 
     "Historias"
     "Luz"
     "darkside"
-    "mandolito";
+    "mandolitos";
     grid-template-columns:auto ;
     grid-template-rows: auto  ;
 }
 
 .Historias {
-    grid-area: Historias; 
+    transition: transform 0.6s;
 }
 
+.Historias:hover{
+    grid-area: Historias;
+    transform: scale(0.9); 
+}
 .Luz {
-
+    transition: transform 0.6s;
+}
+.Luz:hover {
     grid-area: Luz;
+    transform: scale(0.9); 
 }
-.darkside {
- 
+.darkside{
+    transition: transform 0.6s
+}
+.darkside:hover {
     grid-area: darkside;
+    transform: scale(0.9); 
 }
-.mandolito {
- 
-    grid-area: mandolito;
+.mandolitos {
+    transition: transform 0.6s
+}
+.mandolitos:hover {
+    grid-area: mandolitos;
+    transform: scale(0.9); 
 }
